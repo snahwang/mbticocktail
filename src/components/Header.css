@@ -1,0 +1,26 @@
+.pageHeader{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* align-items: left; */
+    padding: 15px;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+
+.pageHeader div:nth-child(1){
+    display: flex;
+    flex:1;
+    text-align: left;
+}
+
+.pageHeader div:nth-child(2){
+    display: flex;
+    flex:1;
+    text-align: center;
+}
+
+.pageHeader div:nth-child(2) .a{
+    margin: 0px 3px 0px 3px;
+}

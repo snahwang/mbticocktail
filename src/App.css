@@ -13,6 +13,11 @@
   }
 }
 
+@font-face {
+  font-family: "YeongdeokSea";
+  src: url("./resources/fonts/YeongdeokSea.ttf");
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
