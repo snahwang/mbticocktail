@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <React.StrictMode>
-        <HashRouter>
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/result" element={<Result/>}></Route>
             <Route path="/test" element={<Test/>}></Route>
