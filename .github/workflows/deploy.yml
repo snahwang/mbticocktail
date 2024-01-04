@@ -1,0 +1,33 @@
+name: Deploy test
+
+on:
+    push:
+        branches:
+            - main
+            - test
+        paths:
+            -.github/workflows/deploy.yml
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        defaults:
+          run:
+            working-directory: .
+        steps:
+          - name : first
+            run : |
+                  echo "first"
+          - if: github.ref == 'refs/heads/main'
+            name : main
+            run : |
+                  echo "main"
+          - if: github.ref == 'refs/heads/test'
+            name : test
+            run : |
+                  echo "test"
+          - name : second
+            run : |
+                  echo "second"          
+
+          
