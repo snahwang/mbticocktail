@@ -1,5 +1,6 @@
 name: Deploy test
 
+
 on:
     push:
         branches:
@@ -8,8 +9,8 @@ on:
         paths:
             - "**"
 
-run-name: Run with ${{ github.sha }} commit by ${{ github.actor }}
- 
+run-name: [PROD] ${{ github.event.head_commit.message }}
+
 
 jobs:
     deploy:
