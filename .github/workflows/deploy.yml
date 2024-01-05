@@ -18,6 +18,8 @@ jobs:
           run:
             working-directory: .
         steps:
+          - name: Print github.event
+            run: cat $GITHUB_EVENT_PATH
           - name : first
             run : |
                   echo "first"
