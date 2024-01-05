@@ -9,7 +9,7 @@ on:
         paths:
             - "**"
 
-run-name: [PROD] ${{ github.event.head_commit.message }}
+run-name: ${{ contains(github.event.ref, 'main') && '[PROD]' || '[DEV]'}} ${{ github.event.head_commit.message }}
 
 
 jobs:
