@@ -20,6 +20,8 @@ jobs:
         steps:
           - name: Print github.event
             run: cat $GITHUB_EVENT_PATH
+          - name: Print github.event
+            run: echo ${{ github.event.pull_request.head.sha }}
           - name : first
             run : |
                   echo "first"
